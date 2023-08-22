@@ -29,6 +29,7 @@ main{
     bottom: -5vw;
     left: 10vw;
     width: 107vw;
+    height: 25vh;
     height: fit-content;
     filter: drop-shadow(2px 4px 5px black);
     animation: cloud linear 2s infinite;
@@ -40,7 +41,7 @@ main{
     z-index: 0;
     left: -13vw;
     width: 110vw;
-    height: fit-content;
+    height: 20vh;
     filter: drop-shadow(2px 4px 5px black);
     animation: cloud linear 1.7s infinite;
 }
@@ -48,18 +49,18 @@ main{
     position: absolute;
     bottom: -7vw;
     left: 5vw;
+    height: 20vh;
     width: 100vw;
-    height: fit-content;
     filter: drop-shadow(2px 4px 5px black);
     animation: cloud linear 2.2s infinite;
     animation-delay: 2.5s;
 }
 #cloud4{
     position: absolute;
-    bottom: 2vw;
+    bottom: 0vw;
     left: -72vw;
     width: 100vw;
-    height: fit-content;
+    height: 22vh;
     filter: drop-shadow(2px 4px 5px black);
     animation: cloud linear 2s infinite;
     animation-delay: 2.5s;
@@ -70,7 +71,7 @@ main{
     bottom: -1vw;
     left: 81vw;
     width: 100vw;
-    height: fit-content;
+    height: 20vh;
     filter: drop-shadow(2px 4px 5px black);
     animation: cloud linear 1.4s infinite;
     animation-delay: 2.5s;
