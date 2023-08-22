@@ -1,0 +1,249 @@
+body,html{
+    margin:0;padding:0;
+    overflow: hidden;   
+}
+*{
+    user-select: none;
+    -webkit-user-drag: none;
+    font-family: 'Inconsolata', monospace;
+    /* outline: 1px solid green; */
+}
+body{
+    background-color: #021a2f;
+    overflow: hidden;
+    max-height: 100vh;
+    position: relative;
+
+}
+main{
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cloud1{
+    position: absolute;
+    bottom: -5vw;
+    left: 10vw;
+    width: 107vw;
+    height: fit-content;
+    filter: drop-shadow(2px 4px 5px black);
+    animation: cloud linear 2s infinite;
+    animation-delay: 1s;
+}
+#cloud2{
+    position: absolute;
+    bottom: -5vw;
+    z-index: 0;
+    left: -13vw;
+    width: 110vw;
+    height: fit-content;
+    filter: drop-shadow(2px 4px 5px black);
+    animation: cloud linear 1.7s infinite;
+}
+#cloud3{
+    position: absolute;
+    bottom: -7vw;
+    left: 5vw;
+    width: 100vw;
+    height: fit-content;
+    filter: drop-shadow(2px 4px 5px black);
+    animation: cloud linear 2.2s infinite;
+    animation-delay: 2.5s;
+}
+#cloud4{
+    position: absolute;
+    bottom: 2vw;
+    left: -72vw;
+    width: 100vw;
+    height: fit-content;
+    filter: drop-shadow(2px 4px 5px black);
+    animation: cloud linear 2s infinite;
+    animation-delay: 2.5s;
+    z-index: -5;
+}
+#cloud5{
+    position: absolute;
+    bottom: -1vw;
+    left: 81vw;
+    width: 100vw;
+    height: fit-content;
+    filter: drop-shadow(2px 4px 5px black);
+    animation: cloud linear 1.4s infinite;
+    animation-delay: 2.5s;
+    z-index: -3;
+}
+#conatinerPlanet{
+    height: 100vh;
+    width: max-content;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#planet{
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    border-radius: 100vw;
+    background-color: red;
+    background: rgb(33, 101, 161);
+    background: radial-gradient(circle, rgb(34, 99, 156) 15%, #011d2c 100%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#head{
+    position: relative;
+    top: 37%;
+    text-align: center;
+    color: #ffffffba;
+    letter-spacing: 1vw;
+    font-size: 1.75vw;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#head1{
+    position: relative;
+    font-size: 1.25vw;
+    letter-spacing: 0.1vw;
+    top: 28%;
+    text-align: center;
+    color: #ef7f1a;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+#head2{
+    position: relative;
+    font-size: 1.05vw;
+    letter-spacing: 0;
+    top: 24%;
+    text-align: center;
+    color: #ffffffba;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#head3{
+    position: relative;
+    font-size: 1.05vw;
+    letter-spacing: 0;
+    top: 16%;
+    text-align: center;
+    color: #ffffffba;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.star{
+    width: 0.1vw;
+    height: 0.1vw;
+    position: absolute;
+    background: white;
+    border-radius: 46vw;
+    opacity: 0.9;
+    filter: brightness(0.8);
+    box-shadow: 0px 0px 8px white;
+}
+#rocket1{
+    position: relative;
+    width: 2.3vw;
+    left:-1vw;
+    z-index: 200;
+    transform-origin: 1vw;
+    transition: all 7.5s linear;
+    transform: rotate(350deg) translate(-1vw, 100vw);
+}
+
+#rocket2{
+    position: relative;
+    left: -5vw;
+    width: 2vw;
+    z-index: 200;
+    transition: all 7.5s linear;
+    transform: translate(-16vw, 102vw);
+}
+#particle{
+    position: absolute;
+    left: 18vw;
+    top: 40vh;
+    animation: rotate 10s linear infinite;
+    width: 3.5vw;
+
+}
+#particle1{
+    position: absolute;
+    left: 70vw;
+    top: 70vh;
+    animation: rotate1 10s linear infinite;
+    width: 3.5vw;
+}
+#p{
+    position: absolute;
+    top: 9vh;
+    width: 3.5vw;
+}
+#p1{
+    position: absolute;
+    top: 75vh;
+    left: 26vw;
+    width: 3.5vw;
+}
+#avatar{
+    position: relative;
+    width: 1.25vw;
+    z-index: 200;
+    top: -12.5vw;
+    left: -9.2vw;
+}
+#shuttle{
+    position: relative;
+    width: 4.5vw;
+    left: -0.2vw;
+    top: -81%;
+}
+#typed{
+    position: absolute;
+    background: url(./asset/chat.png);
+    background-size: 100% 100%;
+    width: 8.45vw;
+    height: 20vh;
+    top: -24vw;
+    left: -10vw;
+    padding: 0.4vw;
+    display: flex;
+    visibility: hidden;
+    justify-content: flex-end;
+    padding-right: 2vw;
+    padding-left: 1vw;
+    font-size: 1.05vw;
+    align-items: flex-end;
+}
+#planet span{
+    position: relative;
+}
+#planet i{
+    position: relative;
+    font-size: 1.05vw;
+    letter-spacing: 0;
+    top: 16%;
+    text-align: center;
+    color: #ffffffba;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#planet a{
+    position: relative;
+    font-size: 1.05vw;
+    letter-spacing: 0;
+    top: 16%;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffffba;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: 0.2s;
+}
+#planet a:hover{
+    filter: drop-shadow(2px 2px 10px black);
+}
