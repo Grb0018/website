@@ -256,22 +256,30 @@ main{
 }
 
 @media only screen and (max-width: 600px){
+    #cloud1{
+        height: 9vh;
+        position: fixed;
+    }
     #cloud2{
         width: 155vw;
-        height: 10vh;    
+        height: 10vh; 
+        position: fixed;   
     }
     #cloud3{
         height: 10vh;
         width: 150vw;
+        position: fixed;
     }
     #cloud4{
         width: 212vw;
         height: 15vh;
+        position: fixed;
     }
     #cloud5{
     left: 66vw;
     width: 151vw;
     height: 10vh;
+    position: fixed;
     }
     #planet{
         width: 65vw;
