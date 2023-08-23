@@ -390,18 +390,20 @@ main{
         top: 11%;
     }
     #yes{
-    width: 9vw;
+    width: 12vw;
     background: #ffc47d;
     border: 0;
     filter: drop-shadow(2px 1px 1px grey);
+    color: #021a2f;
     font-size: 3vw;
     }
     #later{
-        width: 10vw;
+        width: 12vw;
         background: #f39999;
         border: 0;
         filter: drop-shadow(2px 1px 1px grey);
         font-size: 3vw;
+        color: #021a2f;
     }
     #typed{
         font-size: 3.4vw;
