@@ -297,7 +297,7 @@ main{
     }
     #p1{
         position: absolute;
-        top: 76vh;
+        top: 72vh;
         left: 26vw;
         width: 10.5vw;    
     }
@@ -316,9 +316,9 @@ main{
     #particle1{
         position: absolute;
         left: 70vw;
-        top: 79vh;
+        top: 73vh;
         animation: rotate1 10s linear infinite;
-        width: 11.5vw;
+        width: 8.5vw;
     }
     #shuttle{
         position: relative;
