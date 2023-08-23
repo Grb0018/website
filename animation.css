@@ -22,6 +22,21 @@
         transform: rotate(360deg) translate(-18vw, 2vw);
     }
 }
+
+
+/* MOBILE VIEW CSS */
+@keyframes rocket1m {
+    100%{
+        transform: rotate(-360deg) translate(40vw,6vw);
+    }
+}
+@keyframes rocket2m {
+    100%{
+        transform: rotate(360deg) translate(-50vw, 5vw);
+    }
+}
+
+
 @keyframes rotate {
     100%{
         transform: rotate(360deg);

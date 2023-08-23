@@ -38,26 +38,42 @@ window.onload=()=>{
     },1800)
 
     setTimeout(()=>{
-        document.getElementById('rocket1').style.transform = 'rotate(360deg) translate(15vw,5vw)';
-        setTimeout(()=>{
-            document.getElementById('rocket1').style.transition = 'unset';
-            document.getElementById('rocket1').style.animation = 'rocket1 20.4s linear infinite';
-        },7495)
+        if(window.innerWidth < 600){
+            document.getElementById('rocket1').style.transform = 'rotate(360deg) translate(40vw,6vw)';
+            setTimeout(()=>{
+                document.getElementById('rocket1').style.transition = 'unset';
+                document.getElementById('rocket1').style.animation = 'rocket1m 20.4s linear infinite';
+            },7495)
+        }else{
+            document.getElementById('rocket1').style.transform = 'rotate(360deg) translate(15vw,5vw)';
+            setTimeout(()=>{
+                document.getElementById('rocket1').style.transition = 'unset';
+                document.getElementById('rocket1').style.animation = 'rocket1 20.4s linear infinite';
+            },7495)
+        }
     },800)
 
     setTimeout(()=>{
-        document.getElementById('rocket2').style.transform = 'rotate(0deg) translate(-18vw, 2vw)';
-        setTimeout(()=>{
-            document.getElementById('rocket2').style.transition = 'unset';
-            document.getElementById('rocket2').style.animation = 'rocket2 25.4s linear infinite';
-        },7495)
+        if(window.innerWidth < 600){
+            document.getElementById('rocket2').style.transform = 'rotate(0deg) translate(-50vw, 5vw)';
+            setTimeout(()=>{
+                document.getElementById('rocket2').style.transition = 'unset';
+                document.getElementById('rocket2').style.animation = 'rocket2m 25.4s linear infinite';
+            },7495)
+        }else{
+            document.getElementById('rocket2').style.transform = 'rotate(0deg) translate(-18vw, 2vw)';
+            setTimeout(()=>{
+                document.getElementById('rocket2').style.transition = 'unset';
+                document.getElementById('rocket2').style.animation = 'rocket2 25.4s linear infinite';
+            },7495)
+        }
     },800)
 
 }
 setTimeout(()=>{
     document.getElementById('typed').style.visibility = 'visible';
     var typed = new Typed(".text-slider", {
-        strings: ["hi","Welcome to Bitblits Digital Workstation","Do you want to access the website ?",`<button onclick="window.open('http://bitblits.in/DIGITAL-BROCHUR/')" style='width: 5vw;background: #ffc47d;border: 0;filter: drop-shadow(2px 1px 1px grey);font-size: 1vw;'>Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;<button style='width: 5vw;background: #f39999;border: 0;filter: drop-shadow(2px 1px 1px grey);font-size: 1vw;'>Later</button>`],
+        strings: ["hi","Welcome to Bitblits Digital Workstation","Do you want to access the website ?",`<button onclick="window.open('http://bitblits.in/DIGITAL-BROCHUR/')" id="yes">Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="later">Later</button>`],
         typeSpeed: 100,
         backSpeed: 50,
         loop: false,
