@@ -70,10 +70,97 @@ window.onload=()=>{
     },800)
 
 }
+
+const openForm = ()=>{
+
+    document.body.innerHTML+=`
+    <form action="">
+    <span class="formSpan">
+        <span class="formLogo">B</span>
+        <span class="formHead">Enter Your Details</span>
+    </span>
+        <span class="formBody">
+            <p>Name *</p>
+            <input type="tel" name="name" required>
+            <p>Phone *</p>
+            <input type="mail" name="name" required>
+            <p>Email *</p>
+            <input type="text" name="name" required>
+            <p>Organisation</p>
+            <input type="text" name="name" required>
+        </span>
+        <button type="submit">Submit</button>
+        <span class="formClose" onclick="formCloseFun()">x</span>
+   </form>
+    `;
+
+    
+    document.getElementById('typed').style.animation='fadeOut 2s linear';
+    setTimeout(()=>{
+        $('#typed').css({
+            'animation':'unset',
+            'opacity':'1',
+            "visibility":'hidden'
+        })
+    },1500)
+
+    setTimeout(()=>{
+       
+        $('form').animate({
+            "height" : "51vh",
+            "width": "18vw",
+            "padding":"1vw"
+        })
+        setTimeout(()=>{
+            var x=0;
+            $('.formClose').fadeIn(1500);
+            document.querySelector('form').querySelectorAll('span').forEach(e=>{
+                setTimeout(()=>{
+                    $(e).fadeIn(400);
+                },x)
+                x+=200;
+            })
+            document.querySelector('form').querySelectorAll('button').forEach(e=>{
+                setTimeout(()=>{
+                    $(e).fadeIn(400);
+                },x)
+            })
+        },1700)
+    },600)
+    
+    document.body.querySelector('.formClose').onclick=()=>{
+        document.querySelector('form').querySelectorAll('input').forEach((e)=>{
+           e.value="";
+        });
+        var x=0;
+        document.querySelector('form').querySelectorAll('span').forEach(e=>{
+            setTimeout(()=>{
+                $(e).fadeOut(400);
+            },x)
+            x+=200;
+        })
+        document.querySelector('form').querySelectorAll('button').forEach(e=>{
+            setTimeout(()=>{
+                $(e).fadeOut(400);
+            },x)
+        })
+        $(".formClose").animate({
+            "visibility":"hidden"
+        })
+        $('form').animate({
+            "height" : "0vh",
+            "width": "0vw",
+            "padding":"0vw"
+        },100,"easeOutBounce");
+    
+    
+    }
+}
+
 setTimeout(()=>{
     document.getElementById('typed').style.visibility = 'visible';
     var typed = new Typed(".text-slider", {
-        strings: ["hi","Welcome to Bitblits Digital Workstation","Do you want to access the website ?",`<button onclick="window.open('http://bitblits.in/DIGITAL-BROCHUR/')" id="yes">Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="later">Later</button>`],
+        strings: ["hi","Welcome to Bitblits Digital Workstation","Do you want to access the website ?",`<button onclick="openForm()" id="yes">Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="later">Later</button>`],
         typeSpeed: 100,
         backSpeed: 50,
         loop: false,
